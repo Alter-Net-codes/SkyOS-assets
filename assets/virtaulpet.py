@@ -60,7 +60,7 @@ def main():
             
         elif task == "feed":
             tired += 2
-            print("Good idea to feed him; he was at", hunger, "hunger points!")
+            print("Good idea to feed him, he was at:", hunger, "hunger points!")
             print("You feed your dog.")
             hunger = 0
             status = "happy"
@@ -69,7 +69,7 @@ def main():
 
         elif task == "rest":
             hunger += 2
-            print("Good idea; your dog was at", tired, "tired points!")
+            print("Good idea. your dog was at:", tired, "tired points!")
             print("You put your dog to sleep.")
             tired = 0
             status = "happy"
@@ -86,24 +86,7 @@ def main():
             print("Goodbye!")
             print("See you later.")
             print("Saving and quitting...")
-
-            # Path to the kernel script in the KERNEL folder
-            kernel_script = os.path.join(os.getcwd(), 'KERNEL', 'kernel.py')
-            
-            # Check if the kernel script exists before trying to run it
-            if os.path.isfile(kernel_script):
-                try:
-                    # Run the kernel script as a subprocess
-                    subprocess.run([sys.executable, kernel_script], check=True)
-                except subprocess.CalledProcessError as e:
-                    print(f"Error executing the kernel script: {e}")
-                except Exception as e:
-                    print(f"An unexpected error occurred: {e}")
-            else:
-                print("Kernel Script Not found.")
-
-            break
-
+            sys.exit()
         else:
             print("That is not a valid action!")
 
