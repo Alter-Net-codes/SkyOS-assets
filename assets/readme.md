@@ -1,2 +1,2 @@
 PLEASE READ!
-This folder is for SkyOS app assets only!
+This folder is for native SkyOS app assets only!
